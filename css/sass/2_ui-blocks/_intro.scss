@@ -1,0 +1,44 @@
+// INTRO
+
+  .intro{
+    @include global-padding;
+    @include flexbox;
+
+    .container{
+      margin: 40px auto;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+      @include tabletPortrait{
+        margin: 30px 0;
+        @include flex-direction(column);
+      }
+
+      .intro-copy{
+        width: 70%;
+        padding-right: 40px;
+        @include tabletPortrait{
+          width: auto;
+          padding-right: 0;
+        }
+      }
+      .your-data{
+        background: $neutral-2;
+        border: 2px solid $neutral-3;
+        width: 30%;
+        padding: 40px;
+        @include tabletPortrait{
+          width: auto;
+          margin-top: 40px;
+          padding: 20px;
+        }
+
+        h3{
+          margin-top: 0;
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }

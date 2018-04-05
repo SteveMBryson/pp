@@ -1,0 +1,43 @@
+// SERVICES
+
+  .service{
+    @include global-padding;
+    @include flexbox;
+
+    .container{
+      .opt-out{
+        @include flexbox();
+        @include justify-content(flex-end);
+        @include align-items(center);
+        border-bottom: 2px solid $neutral-3;
+        padding: 40px 0;
+        @include tabletPortrait{
+          padding: 30px 0;
+        }
+
+        p{
+          @include bold;
+          margin-right: 20px;
+        }
+      }
+      .form-actions{
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding: 40px 0;
+        @include tabletPortrait{
+          @include flex-direction(column);
+          padding: 30px 0;
+        }
+
+        p{
+          margin: 0;
+          padding-right: 20px;
+          @include tabletPortrait{
+            padding: 0 0 30px 0;
+          }
+        }
+      }
+    }
+  }
+ 

@@ -1,0 +1,74 @@
+// VARIABLES
+
+  // Colors
+  $neutral-1: #FFFFFF;
+  $neutral-2: #F9F9F9;
+  $neutral-3: #F1F1F1;
+  $neutral-4: #DDDDDD;
+  $neutral-5: #CFCFCF;
+  $neutral-6: #AAAAAA;
+  $neutral-7: #777777;
+  $neutral-8: #343434;
+  $neutral-9: #222222;
+  $cta: #D5483D;
+  $green: #43D359;
+  $dark-green: #40C755;
+
+  // Widths
+  $width-small: 600px;
+  $width-large: 1200px;
+
+
+// IMPORTS
+
+  // FA
+  @import "../font-awesome/font-awesome";
+  @import "../font-awesome/fa-solid";
+
+  // Mixin
+  @import "1_mixins/flex";
+  @import "1_mixins/media";
+  @import "1_mixins/spacing";
+  @import "1_mixins/typography";
+
+  // UI Blocks
+  @import "2_ui-blocks/footer";
+  @import "2_ui-blocks/header";
+  @import "2_ui-blocks/hero";
+  @import "2_ui-blocks/intro";
+  @import "2_ui-blocks/service";
+  @import "2_ui-blocks/toolbar";
+
+  // UI Elements
+  @import "3_ui-elements/button";
+  @import "3_ui-elements/checkbox";
+  @import "3_ui-elements/form";
+  @import "3_ui-elements/service-item";
+
+  // Themes
+  @import "4_themes/connells-group";
+  @import "4_themes/connells";
+  @import "4_themes/sequence";
+
+
+
+// GLOBALS
+
+  body{
+    background: $neutral-1;
+    margin: 0;
+    @include border-box;
+
+    .container{
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      &.small{
+        max-width: $width-small;
+      }
+      &.large{
+        max-width: $width-large;
+      }
+    }
+  }

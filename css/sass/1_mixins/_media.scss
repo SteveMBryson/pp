@@ -1,0 +1,36 @@
+// VARIABLES
+
+  $mobile: 414px;
+  $tabletPortrait: 768px;
+  $tabletLandscape: 1024px;
+
+
+// MIXINS
+
+  // Mobile
+  @mixin mobile {
+    @media (max-width: $mobile){
+      @content;
+    }
+  }
+
+  // Tablet Portrait
+  @mixin tabletPortrait {
+    @media (max-width: $tabletPortrait){
+      @content;
+    }
+  }
+
+  // Tablet Landscape
+  @mixin tabletLandscape {
+    @media (max-width: $tabletLandscape){
+      @content;
+    }
+  }
+
+  // Everything bigger than Tablet Portrait
+  @mixin desktop {
+    @media (min-width: $tabletLandscape){
+      @content;
+    }
+  }

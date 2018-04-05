@@ -1,0 +1,116 @@
+// VARIABLES
+
+  $font: 'Roboto', sans-serif;
+
+
+// MIXINS
+
+  // Font sizing
+  @mixin font-small{
+    font-size: 0.9em;
+  }
+  @mixin font-regular{
+    font-size: 1em;
+  }
+  @mixin font-large{
+    font-size: 1.1em;
+  }
+
+  // Font Weights
+  @mixin regular{
+    font-weight: 400;
+  }
+  @mixin bold{
+    font-weight: 700;
+  }
+
+
+// GLOBALS
+
+  html, body{
+    font-family: $font;
+    font-size: 16px;
+    @include regular;
+    color: $neutral-6;
+    @include tabletPortrait{
+      font-size: 14px;
+    }
+  }
+
+
+// HEADINGS
+
+  h1, h2, h3, h4{
+    color: $neutral-9;
+    text-transform: uppercase;
+    margin: 40px 0;
+    @include tabletPortrait{
+      margin: 30px 0;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  h1{
+    font-size: 2.353em;
+  }
+  h2{
+    font-size: 1.769em;
+
+    &.highlight{
+      position: relative;
+      margin-bottom: 65px;
+
+      &:before{
+        background: $cta;
+        opacity: .4;
+        content: " ";
+        width: 50px;
+        height: 5px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin: 20px 0 0 -25px;
+      }
+    }
+  }
+  h3{
+    font-size: 1.33em;
+    margin: 20px 0;
+  }
+  h3{
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+
+
+// PARAGRAPHS
+
+  p{
+    line-height: 1.6;
+    margin: 20px 0;
+    max-width: 53em;
+    @include tabletPortrait{
+      line-height: 1.8;
+    }
+
+    &.small{
+      @include font-small;
+    }
+    &.large{
+      @include font-large;
+    }
+    &.space-below{
+      margin-bottom: 40px;
+      @include tabletPortrait{
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  a{
+    color: $cta;
+    text-decoration: none;
+  }

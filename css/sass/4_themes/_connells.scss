@@ -1,0 +1,98 @@
+// VARIABLES
+
+  // Colors
+  $cn-red: #C91C22;
+  $cn-teal: #12A19A;
+
+  // Fonts
+  $cn-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+
+// SEQUENCE THEME
+
+  body{
+
+    // Globals
+    &.connells{
+      font-family: $cn-font;
+
+      // Header
+      header{
+        .identity{
+          .logo{
+            padding: 0 20px;
+            @include tabletPortrait{
+              padding: 0 10px;
+            }
+          }
+        }
+
+        // Nav
+        nav{
+          .item{
+            &.logout{
+              color: $cn-red;
+            }
+          }
+        }
+      }
+
+      // Buttons
+      a.btn{
+        &.cta{
+          background: $cn-red;
+        }
+        &.ghost{
+          border-color: $neutral-7;
+          color: $neutral-5;
+        }
+      }
+
+      // Intro
+      .intro{
+        .container{
+          .your-data{
+            background: $cn-teal;
+            border: 0;
+            color: $neutral-1;
+
+            h3{
+              color: inherit;
+            }
+            a{
+              color: inherit;
+              @include bold;
+            }
+          }
+        }
+      }
+
+      // Services
+      .service-item{
+        .main{
+          .details{
+            .symbol{
+              color: $cn-teal;
+              opacity: 0.4;
+            }
+          }
+        }
+        .alt-option{
+          .description{
+            h4{
+              color: $cn-red;
+            }
+          }
+        }
+      }
+
+      // Typography
+      h1, h2, h3, h4{
+        &.highlight{
+          &:before{
+            background: $cn-red;
+          }
+        }
+      }
+    }
+  }

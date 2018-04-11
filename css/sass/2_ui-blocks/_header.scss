@@ -1,84 +1,32 @@
-// HEADER
+.site-header{
+  width: 100%;
+  border-bottom: $global-border;
 
-  header{
-    width: 100%;
-    border-bottom: 2px solid $neutral-3;
-
-    .email-heading{
-      display: none;
-      @include tabletPortrait{
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-        background: $neutral-2;
-        text-transform: uppercase;
-        @include bold;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      a{
-        text-decoration: none;
-        color: inherit;
-      }
-    }
-
-    .container{
-      @include flexbox;
-      @include justify-content(space-between);
-
-      .identity{
-        @include flexbox;
-        @include align-items(center);
-        padding: 0 20px;
-        max-width: 180px;
-        @include tabletPortrait{
-          padding: 0 10px;
-          max-width: 130px;
-        }
-
-        .logo{
-          width: 100%;
-          padding: 20px;
-          cursor: pointer;
-          @include tabletPortrait{
-            padding: 10px;
-          }
-        }
-      }
-      nav{
-        @include flexbox;
-        @include align-items(center);
-        padding: 0 20px;
-        @include tabletPortrait{
-          padding: 0 10px;
-        }
-
-        .item{
-          padding: 20px;
-          text-transform: uppercase;
-          @include bold;
-          @include tabletPortrait{
-            padding: 10px;
-          }
-
-          &.email{
-            @include tabletPortrait{
-              display: none;
-            }
-
-            a{
-              text-decoration: none;
-              color: inherit;
-            }
-          }
-          &.logout{
-            color: $cta;
-            cursor: pointer;
-          }
-        }
-      }
-    }
+  .site-header__container{
+    @include global-padding;
+    @include border-box;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
   }
+
+  // Logo
+  .site-header__logo{
+    max-width: 150px;
+    padding: 20px 0;
+  }
+
+  // Navigation
+  .site-header__nav{
+    @include flexbox;
+    margin: 0 -20px;
+  }
+  .site-header__nav-item{
+    padding: 20px;
+    @include bold;
+
+      &--link{
+        cursor: pointer;
+      }
+  }
+}

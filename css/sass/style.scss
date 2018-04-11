@@ -10,13 +10,16 @@
   $neutral-7: #777777;
   $neutral-8: #343434;
   $neutral-9: #222222;
-  $cta: #D5483D;
+  $cta: #00456A;
   $green: #43D359;
   $dark-green: #40C755;
 
   // Widths
   $width-small: 600px;
   $width-large: 1200px;
+
+  // Borders
+  $global-border: 2px solid $neutral-3;
 
 
 // IMPORTS
@@ -35,8 +38,6 @@
   @import "2_ui-blocks/footer";
   @import "2_ui-blocks/header";
   @import "2_ui-blocks/hero";
-  @import "2_ui-blocks/intro";
-  @import "2_ui-blocks/service";
   @import "2_ui-blocks/toolbar";
 
   // UI Elements
@@ -44,12 +45,6 @@
   @import "3_ui-elements/checkbox";
   @import "3_ui-elements/form";
   @import "3_ui-elements/service-item";
-
-  // Themes
-  @import "4_themes/connells-group";
-  @import "4_themes/connells";
-  @import "4_themes/sequence";
-
 
 
 // GLOBALS
@@ -64,10 +59,10 @@
       max-width: 1440px;
       margin: 0 auto;
 
-      &.small{
+      &--small{
         max-width: $width-small;
       }
-      &.large{
+      &--large{
         max-width: $width-large;
       }
     }

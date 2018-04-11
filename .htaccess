@@ -59,3 +59,6 @@ RewriteRule ^(.*)/$ /$1 [L,R] # <- for test, for prod use [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+DirectoryIndex login.html

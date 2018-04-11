@@ -1,0 +1,14 @@
+// Site Content
+.site-content{
+  width: 100%;
+
+  &__container{
+    @include global-padding;
+    @include border-box;
+  }
+  &__heading{
+    border-top: $global-border;
+    padding: 30px 0;
+    margin: 0;
+  }
+}

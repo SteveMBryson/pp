@@ -35,6 +35,7 @@
   @import "1_mixins/typography";
 
   // UI Blocks
+  @import "2_ui-blocks/content";
   @import "2_ui-blocks/footer";
   @import "2_ui-blocks/header";
   @import "2_ui-blocks/hero";
@@ -44,7 +45,9 @@
   @import "3_ui-elements/button";
   @import "3_ui-elements/checkbox";
   @import "3_ui-elements/form";
-  @import "3_ui-elements/service-item";
+  @import "3_ui-elements/keep-in-touch";
+  @import "3_ui-elements/opt-out";
+  @import "3_ui-elements/service";
 
 
 // GLOBALS

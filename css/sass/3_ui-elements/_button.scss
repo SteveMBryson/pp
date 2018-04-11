@@ -1,0 +1,25 @@
+// Buttons
+.btn{
+  border: $global-border;
+  border-color: $neutral-7;
+  color: $neutral-7;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 5px;
+  @include border-box;
+  @include flexbox;
+  @include align-items(center);
+  @include bold;
+
+  // Icons
+  &:before{
+    margin-right: 10px;
+  }
+
+  // Themes
+  &--cta{
+    background: $cta;
+    border: 0;
+    color: $neutral-1;
+  }
+}

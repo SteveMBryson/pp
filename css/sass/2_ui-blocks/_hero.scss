@@ -1,0 +1,40 @@
+// Site Hero
+.site-hero{
+  padding: 40px 0;
+  @include tabletPortrait{
+    padding: 20px 0;
+  }
+
+  &__container{
+    @include global-padding;
+    @include border-box;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  // Intro
+  &__intro{
+    width: 65%;
+    padding-right: 40px;
+
+    &__heading{
+      margin-top: 20px;
+    }
+  }
+}
+
+// Data Protection
+.data-protection{
+  background: $neutral-2;
+  border: $global-border;
+  width: 35%;
+  padding: 30px;
+
+  &__heading{
+    margin-top: 0;
+  }
+  &__copy{
+    margin-bottom: 0;
+  }
+}

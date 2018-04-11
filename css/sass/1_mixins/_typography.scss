@@ -42,10 +42,6 @@
 
   h1, h2, h3, h4{
     color: $neutral-9;
-    margin: 40px 0;
-    @include tabletPortrait{
-      margin: 30px 0;
-    }
 
     a{
       color: inherit;
@@ -53,40 +49,21 @@
     }
   }
   h1{
-    font-size: 2.353em;
+    font-size: 2em;
+    margin: 40px 0;
+    @include tabletPortrait{
+      margin: 30px 0;
+    }
   }
   h2{
-    font-size: 1.769em;
-
-    &.highlight{
-      position: relative;
-      margin-bottom: 65px;
-
-      &:before{
-        background: $cta;
-        opacity: .4;
-        content: " ";
-        width: 50px;
-        height: 5px;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin: 20px 0 0 -25px;
-      }
-      &.left{
-        &:before{
-          left: 0;
-          margin-left: 0;
-        }
-      }
+    font-size: 1.6em;
+    margin: 30px 0;
+    @include tabletPortrait{
+      margin: 20px 0;
     }
   }
   h3{
-    font-size: 1.33em;
-    margin: 20px 0;
-  }
-  h3{
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 20px 0;
   }
 

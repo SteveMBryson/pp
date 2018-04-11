@@ -1,0 +1,25 @@
+// Opt-out
+.keep-in-touch{
+  padding: 30px 0;
+  border-top: $global-border;
+
+  // Inline
+  &__inline{
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  // Actions
+  &__actions{
+    @include flexbox;
+    @include justify-content(flex-end);
+  }
+  &__btn{
+    &:before{
+      @include fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-check-circle);
+    }
+  }
+}

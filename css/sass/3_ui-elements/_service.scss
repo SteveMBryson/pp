@@ -1,0 +1,17 @@
+// Service
+.service{
+  padding: 30px 0;
+  border-top: $global-border;
+
+  &:nth-of-type(1){
+    border-top: 0;
+  }
+
+  &__heading{
+    color: $cta;
+    margin-top: 0;
+  }
+  &__copy{
+    margin-bottom: 0;
+  }
+}

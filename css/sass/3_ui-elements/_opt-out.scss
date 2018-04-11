@@ -6,9 +6,6 @@
   @include justify-content(space-between);
   @include align-items(center);
   @include flex-wrap(wrap);
-  @include tabletLandscape{
-    @include justify-content(flex-end);
-  }
 
   &__copy{
     margin: 0;

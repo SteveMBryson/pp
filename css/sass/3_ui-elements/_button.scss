@@ -1,14 +1,16 @@
 // Buttons
 .btn{
   border: $global-border;
-  border-color: $neutral-7;
-  color: $neutral-7;
+  border-color: $neutral-6;
+  color: $neutral-6;
   padding: 15px 20px;
   text-align: center;
   border-radius: 5px;
+  cursor: pointer;
   @include border-box;
   @include flexbox;
   @include align-items(center);
+  @include justify-content(center);
   @include bold;
 
   // Icons
@@ -17,9 +19,9 @@
   }
 
   // Themes
-  &--cta{
-    background: $cta;
-    border: 0;
+  &--primary{
+    background: $primary;
+    border-color: $primary;
     color: $neutral-1;
   }
 }

@@ -10,9 +10,9 @@
   $neutral-7: #777777;
   $neutral-8: #343434;
   $neutral-9: #222222;
-  $cta: #00456A;
-  $green: #43D359;
-  $dark-green: #40C755;
+  $primary: #00456A;
+  $secondary: #45A4BA;
+  $secondary-alt: #37879A;
 
   // Widths
   $width-small: 600px;
@@ -39,7 +39,6 @@
   @import "2_ui-blocks/footer";
   @import "2_ui-blocks/header";
   @import "2_ui-blocks/hero";
-  @import "2_ui-blocks/toolbar";
 
   // UI Elements
   @import "3_ui-elements/button";

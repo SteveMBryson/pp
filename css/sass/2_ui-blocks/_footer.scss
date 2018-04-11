@@ -1,0 +1,61 @@
+// Footer
+.site-footer{
+  background: $neutral-3;
+  margin-top: 30px;
+  padding: 60px 0;
+
+  &__container{
+    @include global-padding;
+    @include border-box;
+  }
+
+  // Copy
+  &__copy{
+    padding-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
+    @include flexbox;
+    @include justify-content(center);
+  }
+
+  // Buttons
+  &__actions{
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include tabletPortrait{
+      @include flex-wrap(wrap);
+    }
+  }
+  &__btn{
+    @include tabletPortrait{
+      width: 100%;
+    }
+    &--web{
+      &:before{
+        @include fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-globe);
+      }
+    }
+    &--phone{
+      margin: 0 30px;
+      @include tabletPortrait{
+        margin: 15px 0;
+      }
+      &:before{
+        @include fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-phone);
+      }
+    }
+    &--email{
+      &:before{
+        @include fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-envelope);
+      }
+    }
+  }
+
+}

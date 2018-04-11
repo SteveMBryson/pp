@@ -7,11 +7,34 @@
     border-top: 0;
   }
 
+  // Intro
   &__heading{
-    color: $cta;
+    color: $primary;
     margin-top: 0;
   }
   &__copy{
     margin-bottom: 0;
+  }
+}
+
+// Options
+.service-options{
+  margin: 45px 0 15px 0;
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  &__option{
+    color: $primary;
+    @include font-large;
+    width: 25%;
+    margin: 15px 0px;
+    padding-right: 30px;
+    @include border-box;
+    @include tabletPortrait{
+      width: 50%;
+    }
+    @include mobile{
+      width: 100%;
+    }
   }
 }

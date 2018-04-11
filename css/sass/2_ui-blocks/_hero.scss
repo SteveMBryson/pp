@@ -1,9 +1,6 @@
 // Site Hero
 .site-hero{
-  padding: 40px 0;
-  @include tabletPortrait{
-    padding: 20px 0;
-  }
+  padding: 30px 0;
 
   &__container{
     @include global-padding;
@@ -11,12 +8,19 @@
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
+    @include tabletPortrait{
+      @include flex-wrap(wrap);
+    }
   }
 
   // Intro
   &__intro{
     width: 65%;
-    padding-right: 40px;
+    padding-right: 30px;
+    @include tabletPortrait{
+      width: 100%;
+      padding: 0 0 30px 0;
+    }
 
     &__heading{
       margin-top: 20px;
@@ -30,6 +34,9 @@
   border: $global-border;
   width: 35%;
   padding: 30px;
+  @include tabletPortrait{
+    width: 100%;
+  }
 
   &__heading{
     margin-top: 0;

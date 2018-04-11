@@ -5,8 +5,24 @@
   @include flexbox;
   @include justify-content(space-between);
   @include align-items(center);
+  @include flex-wrap(wrap);
+  @include tabletLandscape{
+    @include justify-content(flex-end);
+  }
 
   &__copy{
     margin: 0;
+    width: 50%;
+    padding-right: 40px;
+    @include tabletLandscape{
+      width: 100%;
+      padding: 0;
+      order: 2;
+    }
+  }
+  &__option{
+    @include tabletLandscape{
+      margin-bottom: 60px;
+    }
   }
 }

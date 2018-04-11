@@ -9,11 +9,15 @@
     @include justify-content(space-between);
     @include align-items(center);
   }
+  &__heading{
+    margin: 0;
+  }
 
   // Actions
   &__actions{
     @include flexbox;
     @include justify-content(flex-end);
+    padding-top: 30px;
   }
   &__btn{
     &:before{
@@ -21,5 +25,15 @@
       @extend .fas;
       content: fa-content($fa-var-check-circle);
     }
+  }
+}
+
+
+// Options
+.option-group{
+  @include flexbox;
+
+  &__option{
+    margin-left: 60px;
   }
 }

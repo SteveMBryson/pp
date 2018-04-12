@@ -96,3 +96,7 @@
     color: $primary;
     text-decoration: none;
   }
+  b{
+    @include bold;
+    color: $neutral-7;
+  }

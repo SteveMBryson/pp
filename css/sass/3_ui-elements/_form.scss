@@ -1,0 +1,60 @@
+// Form
+.form-control{
+  @include flexbox;
+  @include flex-direction(column);
+  margin: 30px 0;
+
+  &__label{
+    color: $neutral-9;
+  }
+  &__input{
+    padding: 20px;
+    border: 0;
+    border-bottom: $global-border;
+    border-color: $neutral-9;
+    color: $neutral-6;
+    outline: none;
+    @include font-regular;
+
+    &::placeholder {
+      color: $neutral-4;
+      opacity: 1; /* Firefox */
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $neutral-4;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $neutral-4;
+    }
+  }
+  &__help{
+    color: $neutral-6;
+    @include mobile{
+      order: 2;
+      margin-top: 30px;
+    }
+  }
+  &__btn{
+    &:after{
+      @include fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-arrow-alt-circle-right);
+    }
+    @include mobile{
+      width: 100%;
+    }
+  }
+
+  &--right{
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+  }
+  &--split{
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include mobile{
+      @include flex-direction(column);
+    }
+  }
+}

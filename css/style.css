@@ -7,7 +7,7 @@
 .site-footer__btn--web:before,
 .site-footer__btn--phone:before,
 .site-footer__btn--email:before,
-.checkbox__box:checked:before,
+.checkbox__label .checkbox__box:checked + .checkbox__span:before,
 .form-control__btn:after,
 .keep-in-touch__btn:before,
 .far,
@@ -96,7 +96,7 @@
 .fa-pull-left.site-footer__btn--web:before,
 .fa-pull-left.site-footer__btn--phone:before,
 .fa-pull-left.site-footer__btn--email:before,
-.fa-pull-left.checkbox__box:checked:before,
+.checkbox__label .checkbox__box:checked + .fa-pull-left.checkbox__span:before,
 .fa-pull-left.form-control__btn:after,
 .fa-pull-left.keep-in-touch__btn:before,
 .far.fa-pull-left,
@@ -108,7 +108,7 @@
 .fa-pull-right.site-footer__btn--web:before,
 .fa-pull-right.site-footer__btn--phone:before,
 .fa-pull-right.site-footer__btn--email:before,
-.fa-pull-right.checkbox__box:checked:before,
+.checkbox__label .checkbox__box:checked + .fa-pull-right.checkbox__span:before,
 .fa-pull-right.form-control__btn:after,
 .fa-pull-right.keep-in-touch__btn:before,
 .far.fa-pull-right,
@@ -2836,7 +2836,7 @@ readers do not read off random characters that represent icons */
 .site-footer__btn--web:before,
 .site-footer__btn--phone:before,
 .site-footer__btn--email:before,
-.checkbox__box:checked:before,
+.checkbox__label .checkbox__box:checked + .checkbox__span:before,
 .form-control__btn:after,
 .keep-in-touch__btn:before {
   font-family: 'Font Awesome 5 Free';
@@ -3185,12 +3185,10 @@ b {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center; }
-  .checkbox__box {
-    appearance: none;
-    outline: none;
-    height: 100%;
-    position: relative; }
-    .checkbox__box:before {
+  .checkbox__label {
+    padding-left: 45px;
+    cursor: pointer; }
+    .checkbox__label .checkbox__span:before {
       height: 100%;
       width: 30px;
       content: " ";
@@ -3205,45 +3203,45 @@ b {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    .checkbox__box:checked:before {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: normal;
-      line-height: 1;
-      vertical-align: -.125em;
-      content: "\f00c";
-      background: #45A4BA;
-      border-color: #37879A;
-      color: #FFFFFF;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center;
-      line-height: 1; }
-  .checkbox__label {
-    padding-left: 30px;
-    cursor: pointer; }
-  .checkbox--reverse .checkbox__box {
-    order: 2; }
-    .checkbox--reverse .checkbox__box:before {
+    .checkbox__label .checkbox__box {
+      display: none; }
+      .checkbox__label .checkbox__box:checked + .checkbox__span:before {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        vertical-align: -.125em;
+        content: "\f00c";
+        background: #45A4BA;
+        border-color: #37879A;
+        color: #FFFFFF;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 0.8em; }
+  .checkbox--reverse .checkbox__label {
+    padding: 0 45px 0 0; }
+    .checkbox--reverse .checkbox__label .checkbox__box {
+      order: 2; }
+    .checkbox--reverse .checkbox__label .checkbox__span:before {
       left: auto;
       right: 0; }
-  .checkbox--reverse .checkbox__label {
-    padding: 0 32px 0 0; }
 
 .form-control {
   display: -webkit-box;

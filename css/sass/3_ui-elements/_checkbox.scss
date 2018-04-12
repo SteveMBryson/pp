@@ -7,13 +7,11 @@
 
   $block: '.checkbox';
 
-  &__box{
-    appearance: none;
-    outline: none;
-    height: 100%;
-    position: relative;
+  &__label{
+    padding-left: 45px;
+    cursor: pointer;
 
-    &:before{
+    #{$block}__span:before{
       height: 100%;
       width: 30px;
       content: " ";
@@ -27,36 +25,37 @@
       cursor: pointer;
       @include border-box;
     }
-    &:checked{
-      &:before{
-        @include fa-icon;
-        @extend .fas;
-        content: fa-content($fa-var-check);
-        background: $secondary;
-        border-color: $secondary-alt;
-        color: $neutral-1;
-        @include flexbox;
-        @include align-items(center);
-        @include justify-content(center);
-        line-height: 1;
+    #{$block}__box{
+      display: none;
+
+      &:checked{
+        & + #{$block}__span:before{
+          @include fa-icon;
+          @extend .fas;
+          content: fa-content($fa-var-check);
+          background: $secondary;
+          border-color: $secondary-alt;
+          color: $neutral-1;
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          line-height: 1;
+          font-size: 0.8em;
+        }
       }
     }
   }
-  &__label{
-    padding-left: 30px;
-    cursor: pointer;
-  }
   &--reverse{
-    #{$block}__box{
-      order: 2;
+    #{$block}__label{
+      padding: 0 45px 0 0;
 
-      &:before{
+      #{$block}__box{
+        order: 2;
+      }
+      #{$block}__span:before{
         left: auto;
         right: 0;
       }
-    }
-    #{$block}__label{
-      padding: 0 32px 0 0;
     }
   }
 }

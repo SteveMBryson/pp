@@ -7,6 +7,7 @@
   @include align-items(center);
   @include flex-wrap(wrap);
 
+
   &__copy{
     margin: 0;
     width: 50%;
@@ -20,6 +21,8 @@
   &__option{
     @include tabletLandscape{
       margin-bottom: 60px;
+      width: 100%;
+      @include justify-content(flex-end);
     }
   }
 }

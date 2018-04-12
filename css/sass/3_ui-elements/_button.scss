@@ -27,4 +27,9 @@
     border-color: $primary;
     color: $neutral-1;
   }
+  &--secondary{
+    background: $neutral-3;
+    border-color: $neutral-3;
+    color: $neutral-7;
+  }
 }

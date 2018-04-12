@@ -12,4 +12,12 @@
   }
   &__sub-heading{
   }
+
+  .btn{
+    &:after{
+      @include fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-arrow-alt-circle-right);
+    }
+  }
 }

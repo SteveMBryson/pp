@@ -1,20 +1,28 @@
 $( document ).ready(function() {
 
-  // Opts-out of all services
-  function optOutAllServices(){
-    $('#opt-out').prop('checked', false).click(function() {
-      $('.option').prop('checked', false);
-    });
-  }
+  (function($) {
+    $.fn.toggleDisabled = function(){
+        return this.each(function(){
+            this.disabled = !this.disabled;
+        });
+    };
+  })(jQuery);
 
-  // Un-checks the opt out box if any input is ticked
-  $('.option').prop('checked', false).click(function() {
-    $('#opt-out').prop('checked', false);
+  $('#opt-out').click(function() {
+    $('.service-options').toggleClass('service-options--disabled');
+    $('.service-options__option input').toggleDisabled();
   });
 
-  optOutAllServices();
 
-  // Set the pre-checked services
-  $('.option[checked]').prop('checked', true);
+  var tooltip = document.querySelectorAll('.service-options__tooltip');
+
+  document.addEventListener('mousemove', fn, false);
+
+  function fn(e) {
+      for (var i=tooltip.length; i--;) {
+          tooltip[i].style.left = e.pageX + 'px';
+          tooltip[i].style.top = e.pageY + 'px';
+      }
+  }
 
 });
